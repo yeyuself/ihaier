@@ -1,0 +1,173 @@
+@import "footer";
+$bg-position:background-position;
+$bg_image:url(../img/shop_login_sprite.png);
+body {
+    color: #666;
+}
+
+.inner {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.head {
+    border-bottom: 1px solid #f2f2f2;
+    .inner {
+        padding: 20px 0;
+        position: relative;
+    }
+}
+
+//logo
+.logo {
+    float: left;
+    width: 320px;
+    height: 49px;
+    padding: 0 0 0 10px;
+    .a_logo {
+        margin-right: 10px;
+        float: left;
+        width: 130px;
+        height: 65px;
+        overflow: hidden;
+    }
+}
+
+.login_bg {
+    background: url(http://cdn07.ehaier.com/ac24638d-bfc4-4698-8415-1393427e323d.png) no-repeat 50% 50%;
+    height: 540px;
+    width: 100%;
+    overflow: hidden;
+    min-width: 1000px;
+    .entey {
+        margin: 75px 0 0 510px;
+        background: #e8e8e8;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        padding: 4px;
+        .login {
+            position: relative;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            width: 488px;
+        }
+    }
+}
+
+.login_top {
+    border-bottom: 1px solid #ddd;
+    padding: 25px 15px 15px;
+    h2 {
+        font: 22px/22px 'Microsoft Yahei';
+        float: left;
+        color: #666;
+    }
+    a {
+        float: right;
+        color: #005aaa;
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+
+.login_main {
+    padding: 35px 114px 20px;
+    width: 260px;
+    div {
+        font-size: 12px;
+        line-height: 20px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        input {
+            border: 1px solid #e4e4e4;
+            height: 26px;
+            line-height: 26px;
+            padding: 3px 3px 3px 38px;
+            width: 217px;
+            border-radius: 3px;
+        }
+    }
+    a {
+        font-size: 12px;
+        line-height: 20px;
+        overflow: hidden;
+        float: right;
+        color: #005aaa;
+    }
+}
+
+.user {
+    i {
+        left: 12px;
+        height: 20px;
+        position: absolute;
+        top: 7px;
+        width: 20px;
+        background: $bg_image no-repeat 0 -30px;
+    }
+    em {
+        color: #a4a4a4;
+        left: 38px;
+        position: absolute;
+        top: 7px;
+        font-size: 14px;
+    }
+}
+
+.pass {
+    @extend .user;
+    .icon_lock {
+        background: $bg_image no-repeat 0 -60px;
+    }
+}
+
+.btn {
+    padding: 8px 0;
+    .sub {
+        width: 260px;
+        height: 40px;
+        padding: 0;
+        border: 0;
+        background: #32beff;
+        color: #fff;
+        line-height: 40px;
+        font-size: 15px;
+    }
+}
+
+.login_foot {
+    border-top: 1px solid #ddd;
+    height: 20px;
+    padding: 14px 0;
+    p{
+        height: 20px;
+        padding-left: 7px;
+    }
+    a {
+        display: inline-block;
+        font-size: 12px;
+        line-height: 20px;
+        padding-left: 25px;
+    
+    }
+    a:nth-of-type(1){
+        background: $bg_image no-repeat 0 -154px;
+    }
+    a:nth-of-type(2){
+        background: $bg_image no-repeat 0 -222px;
+    }
+    a:nth-of-type(3){
+        background: $bg_image no-repeat 0 -342px;
+    }
+    a:nth-of-type(4){
+        background: $bg_image no-repeat 0 0;
+    }
+}
+
+//版权信息
+.copyright{
+    background: none;
+}

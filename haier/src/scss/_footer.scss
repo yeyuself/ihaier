@@ -1,0 +1,26 @@
+//版权信息
+.copyright {
+    padding: 15px 0;
+    background: #f2f2f2;
+    .wrap {
+        width: 1190px;
+        margin: 0 auto;
+        text-align: center;
+        .a_links {
+            margin-bottom: 10px;
+        }
+        a:hover {
+            color: #2979ff;
+        }
+        p {
+            margin: 6px 0;
+            color: #999;
+        }
+        .honor {
+            margin-top: 36px;
+            a {
+                margin: 5px;
+            }
+        }
+    }
+}

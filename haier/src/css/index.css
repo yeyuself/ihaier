@@ -1,4 +1,4 @@
-.top_wrap, .header_wrap, .nav_wrap, .wrap, .footer .wrap, .copyright .wrap {
+.top_wrap, .header_wrap, .nav_wrap, .wrap, .footer .wrap {
   width: 1190px;
   margin: 0 auto; }
 
@@ -147,6 +147,25 @@ i {
       float: left;
       padding: 0 24px;
       font-weight: 700; }
+
+.copyright {
+  padding: 15px 0;
+  background: #f2f2f2; }
+  .copyright .wrap {
+    width: 1190px;
+    margin: 0 auto;
+    text-align: center; }
+    .copyright .wrap .a_links {
+      margin-bottom: 10px; }
+    .copyright .wrap a:hover {
+      color: #2979ff; }
+    .copyright .wrap p {
+      margin: 6px 0;
+      color: #999; }
+    .copyright .wrap .honor {
+      margin-top: 36px; }
+      .copyright .wrap .honor a {
+        margin: 5px; }
 
 .container {
   background: #f2f2f2; }
@@ -527,20 +546,3 @@ i {
       margin-left: 20px;
       margin-right: 6px;
       background-position: -72px -201px; }
-
-.copyright {
-  padding: 15px 0;
-  background: #f2f2f2; }
-  .copyright .wrap {
-    text-align: center; }
-    .copyright .wrap .a_links {
-      margin-bottom: 10px; }
-    .copyright .wrap a:hover {
-      color: #2979ff; }
-    .copyright .wrap p {
-      margin: 6px 0;
-      color: #999; }
-    .copyright .wrap .honor {
-      margin-top: 36px; }
-      .copyright .wrap .honor a {
-        margin: 5px; }
