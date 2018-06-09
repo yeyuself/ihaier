@@ -1,0 +1,101 @@
+@import "copyright";
+.inner {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+//头部
+.head {
+    padding: 20px 0 30px;
+    border-bottom: 1px solid #f2f2f2;
+    //logo
+    .inner{
+        position: relative;   
+    }
+    .logo {
+        float: left;
+        width: 320px;
+        height: 49px;
+        padding: 0 0 0 10px;
+        .a_logo {
+            margin-right: 10px;
+            float: left;
+            width: 130px;
+            height: 65px;
+            overflow: hidden;
+        }
+    }
+    h2 {
+        left: 90px;
+        top: 10px;
+        font-size: 20px;
+        position: relative;
+    }
+    .to_login {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        color: #005aaa;
+        font-size: 14px;
+        padding-left: 10px;
+    }
+    .to_login:hover{
+        text-decoration: underline;
+    }
+}
+
+.reg_form {
+    padding: 100px 0 100px 300px;
+    dl {
+        line-height: 40px;
+        margin-bottom: 11px;
+        font-size: 16px;
+        height: 40px;
+        dt {
+            float: left;
+            width: 74px;
+            text-align: right;
+            padding-right: 16px;
+            color: #606060;
+        }
+        dd {
+            float: left;
+            input {
+                width: 200px;
+                padding: 10px 14px;
+                height: 18px;
+                line-height: 18px;
+                overflow: hidden;
+                border: 1px #e6e6e6 solid;
+            }
+        }
+    }
+}
+
+.agree {
+    width: 355px;
+    padding: 20px 0 40px;
+    line-height: 16px;
+    font-size: 14px;
+    color: #606060;
+    a {
+        color: #005aaa;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.reg_now {
+    padding-left: 60px;
+    input {
+        width: 230px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background: rgb(0, 90, 169);
+        color: #fff;
+        border: 0;
+        
+    }
+}

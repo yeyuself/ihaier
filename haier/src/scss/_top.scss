@@ -1,0 +1,68 @@
+//顶部
+$top_height:35px;
+$font_c:#999;
+$bg_image:url(../img/index_new_icos.png);
+$bg_position:background-position;
+
+%wrap {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+i {
+    background: $bg_image no-repeat;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.top {
+    background: #f6f6f6;
+}
+
+.top_wrap {
+    @extend %wrap;
+    height: $top_height;
+    .top_position {
+        float: left;
+        i {
+            display: inline-block;
+            width: 15px;
+            height: 20px;
+            #{$bg_position}: 0 -1px;
+        }
+        span {
+            line-height: $top_height;
+            color: #333;
+            cursor: pointer;
+        }
+    }
+    .top_nav {
+        float: right;
+        height: 20px;
+        line-height: $top_height;
+        li {
+            float: left;
+            color: $font_c;
+        }
+        a {
+            color: #999;
+        }
+        a:hover {
+            color: #2979ff;
+        }
+        .login {
+            background: #33beff;
+            border-radius: 3px;
+            padding: 3px 5px;
+            color: #fff;
+            margin-left: 5px;
+        }
+    }
+}
+
+.links_ver {
+    width: 1px;
+    height: 10px;
+    background: $font_c;
+    margin: 12px 10px 0;
+}

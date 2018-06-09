@@ -1,51 +1,73 @@
-@import "public";
+@import "top";
+@import "header";
 @import "footer";
+@import "copyright";
+$white:#fff;
+$blue:#2979ff;
+$border-s:1px solid #eaeaea;
 $bg-position:background-position;
 .container {
     background: #f2f2f2;
+}
+
+@mixin left(){
+    float: left;
+}
+@mixin width-height($w,$h){
+    width: $w;
+    height: $h;
+}
+
+//兼容border-raidus
+@mixin border-r($lt:10px,$rt:10px,$rb:0,$lb:0){
+    border-radius:$lt $rt $rb $lb;
+    -webkit-border-radius:$lt $rt $rb $lb;
+    -ms-border-radius:$lt $rt $rb $lb;
+    -o-border-radius:$lt $rt $rb $lb;
+    -moz-border-radius:$lt $rt $rb $lb;
 }
 
 .wrap {
     @extend %wrap;
 }
 
+//各版块标题
 .mod_hd {
     height: 60px;
     line-height: 60px;
-    border-radius: 10px 10px 0 0;
+    @include border-r;
     padding: 0 18px;
     h2 {
-        float: left;
-        color: #fff;
+        @include left;
+        color: $white;
         font-size: 18px;
         font-weight: 400;
     }
 }
 
+//幻灯片部分
 .main_top {
     height: 430px;
     position: relative;
 }
 
 .banner {
-    width: 952px;
-    height: 430px;
-    float: left;
+    @include width-height(952px, 430px);
+    @include left;
     background: rgb(225, 238, 154);
 }
-
+//幻灯片右边部分
 .right_inf {
     width: 230px;
     float: right;
-    background: #fff;
+    background: $white;
 }
 
 .user_inf {
     padding: 10px;
     text-align: center;
     .userimg {
-        width: 66px;
-        height: 66px;
+        @include width-height(66px, 66px);
         margin: 0 auto;
         background: url(../img/idx_no_login.png) no-repeat -3px -3px;
         a {
@@ -63,11 +85,11 @@ $bg-position:background-position;
             height: 24px;
             line-height: 24px;
             font-size: 12px;
-            border-radius: 2px;
+            @include border-r(2px,2px,2px,2px);
             padding: 4px 11px;
-            background-color: #2979ff;
+            background-color: $blue;
             margin: 0 5px;
-            color: #fff;
+            color: $white;
         }
     }
 }
@@ -76,16 +98,15 @@ $bg-position:background-position;
     overflow: hidden;
     a {
         display: block;
-        float: left;
+        @include left;
         text-align: center;
         width: 50%;
         padding: 8px 0;
-        border: 1px solid #eaeaea;
+        border: $border-s;
         border-left: 0;
         i {
             display: block;
-            width: 28px;
-            height: 22px;
+            @include width-height(28px, 22px);
             margin-bottom: 5px;
             position: relative;
             left: 50%;
@@ -99,7 +120,7 @@ $bg-position:background-position;
         }
     }
     .left_vip:hover {
-        color: #2979ff;
+        color: $blue;
         i {
             #{$bg-position}: -36px -40px;
         }
@@ -111,7 +132,7 @@ $bg-position:background-position;
         }
     }
     .right_wei:hover {
-        color: #2979ff;
+        color: $blue;
         i {
             #{$bg-position}: -36px -73px;
         }
@@ -125,8 +146,8 @@ $bg-position:background-position;
         line-height: 32px;
         border-bottom: 1px #eaeaea solid;
         span {
-            float: left;
-            border-bottom: 1px #2979ff solid;
+            @include left;
+            border-bottom: 1px $blue solid;
             color: #333;
         }
         a {
@@ -144,49 +165,48 @@ $bg-position:background-position;
 }
 
 .service_inf {
-    border-top: 1px solid #eaeaea;
+    border-top: $border-s;
     overflow: hidden;
     li {
-        float: left;
-        height: 40px;
+        @include left;
+        @include width-height(50%, 40px);
         line-height: 40px;
-        border-right: 1px #eaeaea solid;
-        border-bottom: 1px #eaeaea solid;
-        width: 50%;
+        border-right: $border-s;
+        border-bottom: $border-s;
         margin-right: -1px;
         margin-bottom: -1px;
         text-align: center;
         a:hover {
-            color: #2979ff;
+            color: $blue;
         }
         i {
-            width: 25px;
-            height: 25px;
+            @include width-height(25px, 25px);
             margin-right: 3px;
         }
     }
-    li:nth-of-type(1) i {
+    li:first-child i {
         #{$bg-position}: 0 -131px;
     }
-    li:nth-of-type(2) i {
-        #{$bg-position}: -36px -163px;
+    li:first-child+li i {
+        #{$bg-position}: -36px -132px;
     }
-    li:nth-of-type(3) i {
-        #{$bg-position}: 0 -131px;
+    li:first-child+li+li i {
+        #{$bg-position}: 0 -163px;
     }
-    li:nth-of-type(4) i {
+    li:first-child+li+li+li i {
         #{$bg-position}: -36px -163px;
     }
 }
-
+//幻灯片左边导航
 .nav_list {
-    width: 192px;
-    height: 400px;
+    @include width-height(192px, 400px);
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
+    background: rgb(0, 0, 0);
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    color: $white;
     font-size: 14px;
     padding: 15px 0;
     li {
@@ -195,13 +215,12 @@ $bg-position:background-position;
         padding-left: 12px;
         position: relative;
         a {
-            color: #fff;
+            color: $white;
             display: block;
         }
         i {
             display: inline-block;
-            width: 8px;
-            height: 13px;
+            @include width-height(8px, 13px);
             background: url(../img/jiantou.png) no-repeat;
             position: absolute;
             right: 10px;
@@ -210,33 +229,31 @@ $bg-position:background-position;
     }
 }
 
+//各分会场
 .part {
     margin-top: 30px;
     ul {
         margin-left: -10px;
     }
     li {
-        width: 290px;
-        height: 150px;
+        @include width-height(290px, 150px);
         position: relative;
-        float: left;
+        @include left;
         overflow: hidden;
         margin-left: 10px;
         img {
-            width: 300px;
-            height: 150px;
+            @include width-height(300px, 150px);
         }
     }
 }
 
 //精品推荐
 .rec_hd {
-    background: #2979ff;
+    background: $blue;
     margin-top: 30px;
     h2 {
         i {
-            width: 32px;
-            height: 32px;
+            @include width-height(32px, 32px);
             margin-right: 6px;
             #{$bg-position}: -37px -231px;
         }
@@ -245,19 +262,18 @@ $bg-position:background-position;
 
 .rec_bd {
     padding: 10px;
-    background-color: #fff;
+    background-color: $white;
     overflow: hidden;
     .left_img {
-        float: left;
+        @include left;
         width: 220px;
         overflow: hidden;
         img {
-            width: 230px;
-            height: 400px;
+            @include width-height(230px, 400px);
         }
     }
 }
-
+//新品首发
 .new {
     margin-top: 30px;
     overflow: hidden;
@@ -267,10 +283,10 @@ $bg-position:background-position;
 }
 
 .new_all {
-    float: left;
+    @include left;
     width: 390px;
     margin-left: 10px;
-    background-color: #fff;
+    background-color: $white;
     .new_com_hd {
         background: #7aa58f;
     }
@@ -289,7 +305,7 @@ $bg-position:background-position;
 //优品专辑
 .good {
     margin-top: 30px;
-    background: #fff;
+    background: $white;
 }
 
 .good_hd {
@@ -300,13 +316,12 @@ $bg-position:background-position;
         height: 56px;
         top: -10px;
         line-height: 56px;
-        background-color: #2979ff;
+        background-color: $blue;
         padding: 0 18px;
-        border-radius: 10px 10px 0 0;
-        float: left;
+        @include border-r;
+        @include left;
         i {
-            width: 32px;
-            height: 32px;
+            @include width-height(32px, 32px);
             margin-right: 6px;
             #{$bg-position}: 0 -270px;
         }
@@ -314,11 +329,11 @@ $bg-position:background-position;
 }
 
 .good_tab {
-    float: left;
+    @include left;
     margin-left: 156px;
     overflow: hidden;
     li {
-        float: left;
+        @include left;
         position: relative;
         border-bottom: 2px solid #eaeaea;
         margin-left: -1px;
@@ -329,8 +344,7 @@ $bg-position:background-position;
             display: block;
         }
         i {
-            width: 25px;
-            height: 40px;
+            @include width-height(25px, 40px);
             overflow: hidden;
         }
     }
@@ -384,10 +398,9 @@ $bg-position:background-position;
 .review {
     margin-top: 30px;
     .review_hd {
-        background: #2979ff;
+        background: $blue;
         i {
-            width: 32px;
-            height: 32px;
+            @include width-height(32px, 32px);
             margin-right: 6px;
             #{$bg-position}: -41px -271px;
         }
@@ -402,10 +415,9 @@ $bg-position:background-position;
 .foryou {
     margin-top: 30px;
     .foryou_hd {
-        background: #2979ff;
+        background: $blue;
         i {
-            width: 32px;
-            height: 32px;
+            @include width-height(32px, 32px);
             margin-right: 6px;
             #{$bg-position}: 0 -313px;
         }
@@ -416,90 +428,5 @@ $bg-position:background-position;
     height: 300px;
 }
 
-//底部
-.footer {
-    background: #fff;
-    .wrap {
-        @extend %wrap;
-    }
-}
 
-.footer_top {
-    padding: 35px 0 25px;
-    border-bottom: 1px #eaeaea solid;
-    li {
-        width: 25%;
-        position: relative;
-        float: left;
-        a {
-            display: block;
-            padding-left: 25px;
-        }
-        p {
-            margin-bottom: 3px;
-            color: #333;
-            font-weight: 400;
-        }
-        i {
-            width: 43px;
-            height: 43px;
-            float: left;
-            margin-right: 5px;
-        }
-    }
-}
-
-@for $i from 1 through 4 {
-    .footer_top li:nth-of-type(#{$i}) i {
-        #{$bg-position}: ($i - 1)*(-50px) -444px;
-    }
-}
-
-.footer_bot {
-    padding: 20px 0 40px;
-    .help_left {
-        float: left;
-        width: 73%;
-        position: relative;
-        padding-left: 2%;
-        border-right: 1px solid #eaeaea;
-    }
-}
-
-.help-item {
-    float: left;
-    width: 20%;
-    dt {
-        color: #333;
-        margin-bottom: 18px;
-    }
-    dd {
-        line-height: 22px;
-        a:hover {
-            color: #2979ff;
-        }
-    }
-}
-
-.help_right {
-    float: left;
-    width: 24%;
-    padding: 28px 0 0;
-    .kf-btn {
-        display: block;
-        width: 128px;
-        height: 28px;
-        line-height: 28px;
-        margin: 0 auto 24px;
-        border: 1px solid #eaeaea;
-        position: relative;
-        i {
-            width: 22px;
-            height: 22px;
-            margin-left: 20px;
-            margin-right: 6px;
-            #{$bg-position}: -72px -201px;
-        }
-    }
-}
 

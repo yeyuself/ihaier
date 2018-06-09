@@ -1,0 +1,215 @@
+@import "top";
+@import "header";
+@import "footer";
+@import "copyright";
+$bg-img:url(../img/New_sprite-product.png);
+$bg-position:background-position;
+%wrap {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.search {
+    width: 490px;
+    padding-left: 20px;
+    .searchbox {
+        input {
+            width: 418px;
+        }
+    }
+}
+
+.cart {
+    float: right;
+    margin-left: 0;
+}
+
+.container {
+    .wrap {
+        @extend %wrap;
+    }
+}
+
+.links {
+    line-height: 30px;
+    padding: 5px 4px;
+    a {
+        margin: 0 4px;
+    }
+    strong {
+        color: #d71249;
+        font-weight: 700;
+        margin: 0 4px;
+    }
+}
+
+.product_picbox {
+    float: left;
+    width: 384px;
+    .product_pic {
+        border: 1px solid #ddd;
+        width: 382px;
+        height: 405px;
+        padding-top: 1px;
+        text-align: center;
+        font-size: 16px;
+    }
+    .product_piclist {
+        padding: 15px 29px 0;
+        .imglist {
+            width: 325px;
+            overflow: hidden;
+            li {
+                float: left;
+                width: 65px;
+                height: 70px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.product_piclist {
+    position: relative;
+    i {
+        position: absolute;
+        width: 24px;
+        height: 40px;
+        top: 21px;
+        background: $bg-img no-repeat;
+    }
+    .left {
+        #{$bg-position}: -1px -95px;
+        left: 0;
+    }
+    .right {
+        #{$bg-position}: 3px -145px;
+        right: 0;
+    }
+}
+
+.product_inf {
+    float: right;
+    width: 605px;
+    position: relative;
+    h2 {
+        font-size: 22px;
+        padding: 0 0 8px;
+        font-weight: 700;
+    }
+    .kf {
+        position: absolute;
+        right: 0;
+        top: 130px;
+        height: 23px;
+        line-height: 23px;
+        i {
+            width: 32px;
+            height: 23px;
+            background: $bg-img no-repeat -450px -106px;
+        }
+    }
+}
+
+.product_inf_list {
+    line-height: 26px;
+    color: #666;
+    span {
+        margin-left: 8px;
+    }
+    .sep {
+        span {
+            color: #000;
+        }
+    }
+    .price {
+        span {
+            color: #d71249;
+            font-size: 18px;
+            font-weight: 900;
+        }
+    }
+}
+
+.deal {
+    position: relative;
+    background: #f4f5f7;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+    padding: 10px;
+    .inv {
+        margin-left: 45px;
+        margin-top: 5px;
+    }
+}
+
+.area {
+    line-height: 32px;
+    margin-bottom: 10px;
+    .s_location {
+        display: inline-block;
+        border: 1px solid #cecbce;
+        cursor: pointer;
+        height: 22px;
+        line-height: 21px;
+        padding: 0 18px 0 5px;
+        margin: 0 4px 0 0;
+        background: #fff $bg-img no-repeat right bottom;
+    }
+}
+
+.count {
+    line-height: 32px;
+    margin-bottom: 10px;
+    .count_num {
+        border: 1px solid #ddd;
+        overflow: hidden;
+        height: 20px;
+        display: inline-block;
+        padding: 0;
+        vertical-align: middle;
+        em {
+            width: 20px;
+            height: 22px;
+            line-height: 20px;
+            display: inline-block;
+            text-align: center;
+            font-size: 18px;
+            vertical-align: top;
+            cursor: pointer;
+        }
+        input {
+            height: 22px;
+            line-height: 18px;
+            background: #fff;
+            border: 0;
+            padding: 0;
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            width: 25px;
+            text-align: center;
+            vertical-align: top;
+        }
+    }
+}
+
+.buy {
+    padding-left: 48px;
+    input {
+        height: 40px;
+        border: 0;
+        margin: 7px 10px 0;
+        font-weight: bold;
+        padding-left: 22px;
+        font-size: 16px;
+        color: #fff;
+    }
+    input[type="submit"] {
+        width: 121px;
+        background: $bg-img no-repeat;
+    }
+    input[type="button"] {
+        width: 139px;
+        background: $bg-img no-repeat -124px 0px;
+    }
+}

@@ -1,26 +1,91 @@
-//版权信息
-.copyright {
-    padding: 15px 0;
-    background: #f2f2f2;
+$bg-position:background-position;
+.wrap {
+    @extend %wrap;
+}
+
+//底部
+.footer {
+    background: #fff;
     .wrap {
-        width: 1190px;
-        margin: 0 auto;
-        text-align: center;
-        .a_links {
-            margin-bottom: 10px;
+        @extend %wrap;
+    }
+}
+
+.footer_top {
+    padding: 35px 0 25px;
+    border-bottom: 1px #eaeaea solid;
+    li {
+        width: 25%;
+        position: relative;
+        float: left;
+        a {
+            display: block;
+            padding-left: 25px;
         }
+        p {
+            margin-bottom: 3px;
+            color: #333;
+            font-weight: 400;
+        }
+        i {
+            width: 43px;
+            height: 43px;
+            float: left;
+            margin-right: 5px;
+        }
+    }
+}
+
+@for $i from 1 through 4 {
+    .footer_top li:nth-of-type(#{$i}) i {
+        #{$bg-position}: ($i - 1)*(-50px) -444px;
+    }
+}
+
+.footer_bot {
+    padding: 20px 0 40px;
+    .help_left {
+        float: left;
+        width: 73%;
+        position: relative;
+        padding-left: 2%;
+        border-right: 1px solid #eaeaea;
+    }
+}
+
+.help-item {
+    float: left;
+    width: 20%;
+    dt {
+        color: #333;
+        margin-bottom: 18px;
+    }
+    dd {
+        line-height: 22px;
         a:hover {
             color: #2979ff;
         }
-        p {
-            margin: 6px 0;
-            color: #999;
-        }
-        .honor {
-            margin-top: 36px;
-            a {
-                margin: 5px;
-            }
+    }
+}
+
+.help_right {
+    float: left;
+    width: 24%;
+    padding: 28px 0 0;
+    .kf-btn {
+        display: block;
+        width: 128px;
+        height: 28px;
+        line-height: 28px;
+        margin: 0 auto 24px;
+        border: 1px solid #eaeaea;
+        position: relative;
+        i {
+            width: 22px;
+            height: 22px;
+            margin-left: 20px;
+            margin-right: 6px;
+            #{$bg-position}: -72px -201px;
         }
     }
 }
