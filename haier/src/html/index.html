@@ -146,7 +146,19 @@
         <div class="wrap">
             <div class="main_top">
                 <!-- 幻灯片 -->
-                <div class="banner"></div>
+                <div class="banner">
+                    <i class="banner_left"></i>
+                    <i class="banner_right"></i>
+                    <p class="dot">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </p>
+                    <ul>
+                    </ul>
+                </div>
                 <!-- 右边信息 -->
                 <div class="right_inf">
                     <div class="user_inf">
@@ -176,10 +188,7 @@
                             <a href="#">更多</a>
                         </div>
                         <ul class="notice_list">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                          
                         </ul>
                     </div>
                     <div class="service_inf">
@@ -293,19 +302,16 @@
                     <h2>
                         <i></i>精品推荐</h2>
                 </div>
-                <div class="rec_bd">
+                <div class="rec_bd clear">
                     <div class="left_img">
                         <a href="#">
-                            <img src="../img/tuijian.png.jpg" alt="">
+                            <img src="../img/tuijian.png" alt="">
                         </a>
                     </div>
-                    <ul class="right_com">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                    <ul class="right_com clear">
+                        <p class="line1"></p>
+                        <p class="line2"></p>
+                        <p class="line3"></p>
                     </ul>
                 </div>
             </div>
@@ -316,19 +322,46 @@
                         <div class="new_com_hd mod_hd">
                             <h2>新品首发</h2>
                         </div>
-                        <div class="new_com_bd"></div>
+                        <div class="new_com_bd">
+                            <div class="channel">
+                                <a href="#" class="new_cha">
+                                    <h4>新品频道</h4>
+                                    <p>世界之所以绚丽多彩，源于对新的无止境追求 。</p>
+                                    <em></em>
+                                </a>
+                                <a href="#" class="new_spe">
+                                    <h4>甄选专场</h4>
+                                    <p>甄选好物  用心生活</p>
+                                    <em></em>
+                                </a>  
+                            </div>
+                        </div>
                     </li>
                     <li class="custom_made new_all">
                         <div class="custom_made_hd  mod_hd">
                             <h2>我要定制</h2>
                         </div>
-                        <div class="custom_made_bd"></div>
+                        <div class="custom_made_bd">
+                                <div class="make">
+                                    <a href="#" class="new_cha">
+                                        <h4>定制</h4>
+                                        <p>互联定制 新生好物 心怡生活的起点</p>
+                                        <em></em>
+                                        <span>立即定制</span>
+                                    </a>
+                                </div>
+                        </div>
                     </li>
                     <li class="help_sel new_all">
                         <div class="help_sel_hd  mod_hd">
                             <h2>帮您选</h2>
                         </div>
-                        <div class="help_sel_bd"></div>
+                        <div class="help_sel_bd clear">
+                            <a href="#" class="haier">海尔社区<span>参与话题讨论  赢取精美好礼 </span></a>
+                            <a href="#" class="vip_club">会员俱乐部<span>会员福利  给您家人般的关怀</span></a>
+                            <a href="#" class="know">知识堂<span>了解家电的正确使用方法</span></a>
+                            <a href="#" class="help_center">帮助中心<span>海尔商城真诚为您服务</span></a>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -372,7 +405,17 @@
                         </li>
                     </ul>
                 </div>
-                <div class="good_bd"></div>
+                <div class="good_bd clear">
+                    <div class="good_left_img">
+                        <a href="#"><img src="../img/kongtiao.png" alt="" srcset=""></a>
+                    </div>
+                    <ul class="good_list">
+                        <p class="line1"></p>
+                        <p class="line2"></p>
+                        <p class="line3"></p>
+                        <p class="line4"></p>
+                    </ul>
+                </div>
             </div>
             <!-- 大家都在说 -->
             <div class="review">
@@ -382,17 +425,21 @@
                         <span>大家都在说</span>
                     </h2>
                 </div>
-                <div class="review_bd"></div>
+                <div class="review_bd">
+                    <ul class="everyone clear"></ul>
+                </div>
             </div>
             <!-- 为您推荐 -->
             <div class="foryou">
                 <div class="foryou_hd mod_hd">
                     <h2>
                         <i></i>
-                        <span>大家都在说</span>
+                        <span>为您推荐</span>
                     </h2>
                 </div>
-                <div class="foryou_bd"></div>
+                <div class="foryou_bd">
+                    <ul class="clear"></ul>
+                </div>
             </div>
         </div>
     </div>
@@ -564,7 +611,9 @@
         </div>
 
 
-
+        <script src="../script/lib/jquery-1.12.4.min.js"></script>
+        <script src="../script/js/index.js"></script>
+        <script src="../script/js/effect.js"></script>
 
 </body>
 

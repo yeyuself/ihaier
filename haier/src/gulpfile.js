@@ -57,6 +57,19 @@ gulp.task('watchcss',function(){
     })
 })
 
+//压缩js
+/* gulp.task('uglifyjs',function(){
+    gulp.src('script/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('../dist/script/'));
+});
+//监听js压缩
+gulp.task('watchjs',function(){
+    gulp.watch('script/*.js',function(){
+        gulp.run('uglifyjs');
+    })
+}); */
+
 //页面自刷新
 /* gulp.task('connect',function(){
     connect.server({
