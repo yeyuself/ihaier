@@ -283,8 +283,7 @@ i {
   height: 430px;
   float: left;
   position: relative;
-  overflow: hidden;
-  background: #cc8585; }
+  overflow: hidden; }
   .banner ul {
     width: 10000px;
     position: absolute;
@@ -470,6 +469,77 @@ i {
       right: 10px;
       top: 12px; }
 
+.box {
+  position: absolute;
+  width: 0;
+  left: 192px;
+  background: #fff;
+  overflow: hidden;
+  height: 430px; }
+
+.bx_box,
+.kt_box, .xyj_box {
+  width: 447px;
+  overflow: hidden;
+  height: 430px;
+  background: #fff;
+  position: absolute;
+  display: none;
+  z-index: 12; }
+
+.pro_list {
+  width: 207px;
+  height: 100%;
+  margin-top: 5px;
+  float: left; }
+  .pro_list p {
+    margin: 2px 0 10px 35px;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 900px; }
+  .pro_list li {
+    height: 50px;
+    line-height: 50px; }
+    .pro_list li a {
+      display: block;
+      height: 50px;
+      line-height: 50px;
+      padding-left: 80px;
+      position: relative; }
+    .pro_list li i {
+      width: 40px;
+      height: 40px;
+      background-image: url(../img/list.png);
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 5px;
+      left: 30px; }
+
+.pro_box {
+  float: left; }
+  .pro_box li {
+    width: 232px;
+    height: 104px;
+    border: 4px solid #ccc;
+    border-bottom: 0;
+    position: relative; }
+    .pro_box li img {
+      width: 70px;
+      height: 70px;
+      margin: 20px 28px 0 17px;
+      float: left; }
+    .pro_box li h4 {
+      float: left;
+      width: 90px;
+      margin: 20px 0 6px;
+      height: 36px;
+      overflow: hidden; }
+    .pro_box li strong {
+      position: absolute;
+      left: 113px;
+      top: 70px;
+      color: #FF4400; }
+
 .part {
   margin-top: 30px; }
   .part ul {
@@ -589,25 +659,42 @@ i {
   padding: 0 10px 10px;
   height: 502px; }
 
-.channel a, .make a {
-  position: relative;
-  display: block;
-  padding: 18px 0;
-  height: 90px; }
-  .channel a h4, .make a h4 {
-    border-left: 2px solid #2979ff;
-    padding-left: 4px;
-    height: 14px;
-    line-height: 14px; }
-  .channel a p, .make a p {
-    color: #999;
-    padding: 3px 15px 0 8px; }
-  .channel a em, .make a em {
-    position: absolute;
-    width: 90px;
-    height: 90px;
-    right: 0;
-    top: 18px; }
+.channel, .make {
+  margin-bottom: 10px; }
+  .channel a, .make a {
+    position: relative;
+    display: block;
+    padding: 18px 0;
+    height: 90px; }
+    .channel a h4, .make a h4 {
+      border-left: 2px solid #2979ff;
+      padding-left: 4px;
+      height: 14px;
+      line-height: 14px; }
+    .channel a p, .make a p {
+      color: #999;
+      padding: 3px 15px 0 8px; }
+    .channel a em, .make a em {
+      position: absolute;
+      width: 90px;
+      height: 90px;
+      right: 0;
+      top: 18px; }
+
+.new_img {
+  margin-top: 10px;
+  margin-right: -10px; }
+  .new_img a {
+    float: left;
+    width: 180px;
+    margin-right: 10px;
+    overflow: hidden;
+    position: relative;
+    height: 240px; }
+    .new_img a img {
+      width: 190px;
+      height: 240px;
+      position: absolute; }
 
 .new_cha {
   border-bottom: 1px solid #eaeaea; }
@@ -618,7 +705,7 @@ i {
   background: url(../img/spec.png) no-repeat 0 0; }
 
 .make a {
-  height: 239;
+  height: 217px;
   border: 0; }
   .make a em {
     width: 135px;
@@ -640,8 +727,22 @@ i {
     top: 129px;
     left: 10px; }
 
+.make_img {
+  margin-right: -10px; }
+  .make_img a {
+    float: left;
+    width: 180px;
+    margin-right: 10px;
+    overflow: hidden;
+    height: 240px;
+    position: relative; }
+    .make_img a img {
+      width: 190px;
+      height: 240px;
+      position: absolute; }
+
 .help_sel_bd {
-  padding: 10px; }
+  padding: 20px 10px 19px; }
   .help_sel_bd a {
     float: left;
     width: 50%;
@@ -719,9 +820,18 @@ i {
       width: 25px;
       height: 40px;
       overflow: hidden; }
+  .good_tab .kt {
+    margin-bottom: -2px;
+    border-bottom: 2px solid #2979ff; }
+    .good_tab .kt a {
+      color: #2979ff; }
+    .good_tab .kt i {
+      background-position: 0 -402px; }
 
 .good_bd {
-  padding: 10px; }
+  position: relative; }
+  .good_bd .kongtiao {
+    display: block; }
   .good_bd .good_left_img {
     float: left;
     width: 220px;
@@ -732,6 +842,9 @@ i {
       width: 230px;
       height: 332px;
       position: absolute; }
+
+.good_bd > div {
+  display: none; }
 
 .good_list {
   position: relative;
@@ -761,7 +874,7 @@ i {
     position: relative; }
     .good_list li h4 {
       position: absolute;
-      width: 112px;
+      width: 120px;
       height: 36px;
       top: 25px;
       left: 30px; }
@@ -790,11 +903,25 @@ i {
 
 .review_bd {
   padding-top: 10px;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 392px;
+  position: relative; }
+  .review_bd .rev_left, .review_bd .rev_right {
+    width: 22px;
+    height: 50px;
+    position: absolute;
+    top: 120px;
+    background: url(../img/index_new_icos.png) no-repeat -42px -304px;
+    cursor: pointer;
+    z-index: 10; }
+  .review_bd .rev_right {
+    background-position: -65px -304px;
+    right: 0; }
 
 .everyone {
-  width: 1800px;
-  padding-bottom: 10px; }
+  width: 3000px;
+  padding-bottom: 10px;
+  position: relative; }
   .everyone li {
     margin-right: 10px;
     float: left;
@@ -823,7 +950,8 @@ i {
     .everyone li p {
       color: #333;
       margin: 10px 0;
-      height: 36px; }
+      height: 36px;
+      width: 270px; }
     .everyone li span {
       padding: 0 10px;
       line-height: 24px;

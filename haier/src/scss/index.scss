@@ -57,7 +57,6 @@ $bg-position:background-position;
     @include left;
     position: relative;
     overflow: hidden;
-    background: #cc8585;
     ul {
         width: 10000px;
         position: absolute;
@@ -66,31 +65,31 @@ $bg-position:background-position;
             float: left;
         }
     }
-    .banner_left{
+    .banner_left {
         position: absolute;
         width: 20px;
         height: 60px;
         left: 210px;
-        top:170px;
+        top: 170px;
         #{$bg-position}: -125px -31px;
         cursor: pointer;
         z-index: 5;
     }
-    .banner_right{
+    .banner_right {
         @extend .banner_left;
         left: 920px;
         #{$bg-position}: -158px -31px;
     }
-    .dot{
+    .dot {
         position: absolute;
         bottom: 12px;
         left: 450px;
         padding: 3px 8px;
         border-radius: 10px;
-        background: rgba(0,0,0,0.3);
+        background: rgba(0, 0, 0, 0.3);
         line-height: 12px;
         z-index: 5;
-        span{
+        span {
             display: inline-block;
             width: 12px;
             height: 12px;
@@ -99,12 +98,11 @@ $bg-position:background-position;
             cursor: pointer;
             z-index: 5;
         }
-        .active{
+        .active {
             background: #ff4949;
         }
     }
 }
-
 
 //幻灯片右边部分
 .right_inf {
@@ -282,6 +280,93 @@ $bg-position:background-position;
     }
 }
 
+.box {
+    position: absolute;
+    width: 0;
+    left: 192px;
+    background: #fff;
+    overflow: hidden;
+    height: 430px;
+}
+
+.bx_box,
+.kt_box,.xyj_box {
+    //width: 447px;
+    width: 447px;
+    overflow: hidden;
+    height: 430px;
+    background: #fff;
+    position: absolute;
+    display: none;
+    z-index: 12;
+}
+
+.pro_list {
+    width: 207px;
+    height: 100%;
+    margin-top: 5px;
+    float: left;
+    p {
+        margin: 2px 0 10px 35px;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 900px;
+    }
+    li {
+        height: 50px;
+        line-height: 50px;
+        a {
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            padding-left: 80px;
+            position: relative;
+        }
+        i {
+            width: 40px;
+            height: 40px;
+            background-image: url(../img/list.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 5px;
+            left: 30px;
+        }
+    }
+}
+
+
+
+
+.pro_box {
+    float: left;
+    li {
+        width: 232px;
+        height: 104px;
+        border: 4px solid #ccc;
+        border-bottom: 0;
+        position: relative;
+        img {
+            width: 70px;
+            height: 70px;
+            margin: 20px 28px 0 17px;
+            float: left;
+        }
+        h4 {
+            float: left;
+            width: 90px;
+            margin: 20px 0 6px;
+            height: 36px;
+            overflow: hidden;
+        }
+        strong{
+            position: absolute;
+            left:113px;
+            top:70px;
+            color: #FF4400;
+        }
+    }
+}
+
 //各分会场
 .part {
     margin-top: 30px;
@@ -318,15 +403,14 @@ $bg-position:background-position;
 .rec_bd {
     padding: 10px;
     background-color: $white;
-    
     .left_img {
         @include left;
         width: 220px;
         overflow: hidden;
         position: relative;
-        a{
-           display: block;
-           height: 400px; 
+        a {
+            display: block;
+            height: 400px;
         }
         img {
             @include width-height(230px, 400px);
@@ -436,6 +520,7 @@ $bg-position:background-position;
 }
 
 .channel {
+    margin-bottom: 10px;
     a {
         position: relative;
         display: block;
@@ -456,6 +541,25 @@ $bg-position:background-position;
             @include width-height(90px, 90px);
             right: 0;
             top: 18px;
+        }
+    }
+}
+
+.new_img {
+    margin-top: 10px;
+    margin-right: -10px;
+    
+    a {
+        float: left;
+        width: 180px;
+        margin-right: 10px;
+        overflow: hidden;
+        position: relative;
+        height: 240px;
+        img {
+            width: 190px;
+            height: 240px;
+            position: absolute;
         }
     }
 }
@@ -481,7 +585,7 @@ $bg-position:background-position;
 .make {
     @extend .channel;
     a {
-        height: 239;
+        height: 217px;
         border: 0;
         em {
             @include width-height(135px, 150px);
@@ -502,9 +606,26 @@ $bg-position:background-position;
     }
 }
 
+.make_img {
+    margin-right: -10px;
+    a {
+        float: left;
+        width: 180px;
+        margin-right: 10px;
+        overflow: hidden;
+        height: 240px;
+        position: relative;
+        img {
+            width: 190px;
+            height: 240px;
+            position: absolute;
+        }
+    }
+}
+
 //帮您选
 .help_sel_bd {
-    padding: 10px;
+    padding: 20px 10px 19px;
     a {
         @include left;
         @include width-height(50%, 200px);
@@ -589,10 +710,23 @@ $bg-position:background-position;
             overflow: hidden;
         }
     }
+    .kt {
+        margin-bottom: -2px;
+        border-bottom: 2px solid #2979ff;
+        a {
+            color: #2979ff;
+        }
+        i {
+            #{$bg-position}: 0 -402px;
+        }
+    }
 }
 
 .good_bd {
-    padding: 10px;
+    position: relative;
+    .kongtiao {
+        display: block;
+    }
     .good_left_img {
         float: left;
         width: 220px;
@@ -605,6 +739,10 @@ $bg-position:background-position;
             position: absolute;
         }
     }
+}
+
+.good_bd>div {
+    display: none;
 }
 
 .good_list {
@@ -642,7 +780,7 @@ $bg-position:background-position;
         position: relative;
         h4 {
             position: absolute;
-            width: 112px;
+            width: 120px;
             height: 36px;
             top: 25px;
             left: 30px;
@@ -680,11 +818,28 @@ $bg-position:background-position;
 .review_bd {
     padding-top: 10px;
     overflow: hidden;
+    height: 392px;
+    position: relative;
+    .rev_left {
+        width: 22px;
+        height: 50px;
+        position: absolute;
+        top: 120px;
+        background: url(../img/index_new_icos.png) no-repeat -42px -304px;
+        cursor: pointer;
+        z-index: 10;
+    }
+    .rev_right {
+        @extend .rev_left;
+        background-position: -65px -304px;
+        right: 0;
+    }
 }
 
 .everyone {
-    width: 1800px;
+    width: 3000px;
     padding-bottom: 10px;
+    position: relative;
     li {
         margin-right: 10px;
         float: left;
@@ -718,6 +873,7 @@ $bg-position:background-position;
             color: #333;
             margin: 10px 0;
             height: 36px;
+            width: 270px;
         }
         span {
             padding: 0 10px;
