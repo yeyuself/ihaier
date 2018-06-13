@@ -30,6 +30,22 @@ $bg-position:background-position;
     }
 }
 
+.nav_wrap{
+    position: relative;
+}
+.nav_left:hover{
+    .nav_list{
+        display: block;
+    }
+    
+}
+.nav_list{
+    display: none;
+    position: absolute;
+    top: 40px;
+    z-index: 12;
+}
+
 .links {
     line-height: 30px;
     padding: 5px 4px;
@@ -46,37 +62,81 @@ $bg-position:background-position;
 .product_picbox {
     float: left;
     width: 384px;
+    position: relative;
     .product_pic {
+        position: relative;
         border: 1px solid #ddd;
         width: 382px;
-        height: 405px;
+        height: 382px;
         padding-top: 1px;
         text-align: center;
         font-size: 16px;
+        overflow: hidden;
+        img{
+            width: 380px;
+            height: 380px;
+        }
+        .small_scale{
+            background: #fff;
+            border: 1px solid #e9493d;
+            overflow: hidden;
+            opacity: 0.5;
+            position: absolute;
+            z-index: 20;
+            left: 0;
+            top: 0;
+            visibility: hidden;
+        }
+    }
+    .pos_big_scale{
+        position: absolute;
+        left: 386px;
+        top: 0;
+    }
+    .big_scale{
+        position: relative;
+        left: 0px;
+        top:0px;
+        z-index: 10;
+        width: 382px;
+        height: 382px;
+        overflow: hidden;
+        visibility: hidden;
+        img{
+            position: absolute;
+            left: 0;
+            top:0;
+        }
     }
     .product_piclist {
-        padding: 15px 29px 0;
+        padding-top: 15px;
+        margin: 0 29px;
+        height: 57px;
+        width: 326px;
+        overflow: hidden;
+        position: relative;
         .imglist {
-            width: 325px;
-            overflow: hidden;
+            position: absolute;
+            height: 57px;
             li {
                 float: left;
                 width: 65px;
                 height: 70px;
                 text-align: center;
             }
+            img{
+                width: 53px;
+                height: 53px;
+            }
         }
     }
-}
-
-.product_piclist {
-    position: relative;
     i {
         position: absolute;
         width: 24px;
         height: 40px;
-        top: 21px;
+        top: 405px;
         background: $bg-img no-repeat;
+        z-index: 10;
     }
     .left {
         #{$bg-position}: -1px -95px;
@@ -87,6 +147,10 @@ $bg-position:background-position;
         right: 0;
     }
 }
+
+
+
+
 
 .product_inf {
     float: right;
@@ -146,6 +210,7 @@ $bg-position:background-position;
 .area {
     line-height: 32px;
     margin-bottom: 10px;
+    position: relative;
     .s_location {
         display: inline-block;
         border: 1px solid #cecbce;
@@ -156,6 +221,16 @@ $bg-position:background-position;
         margin: 0 4px 0 0;
         background: #fff $bg-img no-repeat right bottom;
     }
+}
+
+.areaselect{
+    position: absolute;
+    top:28px;
+    left: 51px;
+    border: 1px solid #cecbce;
+    background: #fff;
+    padding: 10px;
+    display: none;
 }
 
 .count {

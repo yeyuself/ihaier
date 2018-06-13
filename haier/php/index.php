@@ -55,6 +55,34 @@
 	for($i=0;$i<mysql_num_rows($xiyiji);$i++){
 		$xiyiji_data[$i]=mysql_fetch_array($xiyiji,MYSQLI_ASSOC);
 	}
+	//彩电
+	$caidian=mysql_query("select * from caidian");
+
+	$caidian_data=array();
+	for($i=0;$i<mysql_num_rows($caidian);$i++){
+		$caidian_data[$i]=mysql_fetch_array($caidian,MYSQLI_ASSOC);
+	}
+	//热水器
+	$reshuiqi=mysql_query("select * from reshuiqi");
+
+	$reshuiqi_data=array();
+	for($i=0;$i<mysql_num_rows($reshuiqi);$i++){
+		$reshuiqi_data[$i]=mysql_fetch_array($reshuiqi,MYSQLI_ASSOC);
+	}
+	//厨电
+	$chudian=mysql_query("select * from chudian");
+
+	$chudian_data=array();
+	for($i=0;$i<mysql_num_rows($chudian);$i++){
+		$chudian_data[$i]=mysql_fetch_array($chudian,MYSQLI_ASSOC);
+	}
+	//生活家电
+	$jiadian=mysql_query("select * from jiadian");
+
+	$jiadian_data=array();
+	for($i=0;$i<mysql_num_rows($jiadian);$i++){
+		$jiadian_data[$i]=mysql_fetch_array($jiadian,MYSQLI_ASSOC);
+	}
 
 //大家都在说
 $everyone=mysql_query("select * from everyone");
@@ -84,6 +112,10 @@ $tuijian=mysql_query("select * from tuijian");
 	$index->lenggui=$lenggui_data;//优品专辑--冷柜
 	$index->bingxiang=$bingxiang_data;//优品专辑--冰箱
 	$index->xiyiji=$xiyiji_data;//优品专辑--洗衣机
+	$index->caidian=$caidian_data;//优品专辑--彩电
+	$index->reshuiqi=$reshuiqi_data;//优品专辑--热水器
+	$index->chudian=$chudian_data;//优品专辑--厨电
+	$index->jiadian=$jiadian_data;//优品专辑--生活家电
 	$index->everyone=$everyone_data;//大家都在说
 	$index->tuijian=$tuijian_data;//为您推荐
 

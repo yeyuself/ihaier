@@ -152,3 +152,125 @@ $bg_position:background-position;
         }
     }
 }
+
+
+//幻灯片左边导航
+.nav_list {
+    width: 192px;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0);
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    color: #fff;
+    font-size: 14px;
+    padding: 15px 0;
+    li {
+        height: 36px;
+        line-height: 36px;
+        padding-left: 12px;
+        position: relative;
+        a {
+            color: #fff;
+            display: block;
+        }
+        i {
+            display: inline-block;
+            width: 8px;
+            height: 13px;
+            background: url(../img/jiantou.png) no-repeat;
+            position: absolute;
+            right: 10px;
+            top: 12px;
+        }
+    }
+}
+
+.box {
+    position: absolute;
+    width: 0;
+    left: 192px;
+    //background: #fff;
+    overflow: hidden;
+    height: 430px;
+}
+
+.bx_box,
+.kt_box,.xyj_box {
+    //width: 447px;
+    width: 447px;
+    overflow: hidden;
+    height: 430px;
+    background: #fff;
+    position: absolute;
+    display: none;
+    z-index: 12;
+}
+
+.pro_list {
+    width: 207px;
+    height: 100%;
+    margin-top: 5px;
+    float: left;
+    p {
+        margin: 2px 0 10px 35px;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 900px;
+    }
+    li {
+        height: 50px;
+        line-height: 50px;
+        a {
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            padding-left: 80px;
+            position: relative;
+        }
+        i {
+            width: 40px;
+            height: 40px;
+            background-image: url(../img/list.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 5px;
+            left: 30px;
+        }
+    }
+}
+
+
+
+
+.pro_box {
+    float: left;
+    li {
+        width: 232px;
+        height: 104px;
+        border: 4px solid #ccc;
+        border-bottom: 0;
+        position: relative;
+        img {
+            width: 70px;
+            height: 70px;
+            margin: 20px 28px 0 17px;
+            float: left;
+        }
+        h4 {
+            float: left;
+            width: 90px;
+            margin: 20px 0 6px;
+            height: 36px;
+            overflow: hidden;
+        }
+        strong{
+            position: absolute;
+            left:113px;
+            top:70px;
+            color: #FF4400;
+        }
+    }
+}

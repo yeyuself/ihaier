@@ -51,6 +51,7 @@
         margin-bottom: 11px;
         font-size: 16px;
         height: 40px;
+        
         dt {
             float: left;
             width: 74px;
@@ -60,6 +61,16 @@
         }
         dd {
             float: left;
+            position: relative;
+            em{
+                position: absolute;
+                left: 15px;
+                top:3px;
+                font-size: 14px;
+                color: #ccc;
+                cursor: text;
+                
+            }
             input {
                 width: 200px;
                 padding: 10px 14px;
@@ -68,6 +79,15 @@
                 overflow: hidden;
                 border: 1px #e6e6e6 solid;
             }
+        }
+        
+        i{
+            position: absolute;
+            left: 105px;
+            top: 10px;
+            font-size: 12px;
+            display: none;
+            z-index: 6;
         }
     }
 }

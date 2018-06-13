@@ -1,5 +1,10 @@
 ;
 (function () {
+    $(document).one('mouseenter',function(){
+
+    
+        
+    
     //轮播图
     $(function ($) {
         $btn = $('.dot span');
@@ -9,11 +14,9 @@
         var num = 0;
         var timer = null;
         $('.dot span:first').addClass('active');
-        $(document).one('mouseenter', function () {
             $ul.find('li').eq(0).clone().appendTo($('.banner ul'));
             $ul.find('li').eq(-2).clone().prependTo($('.banner ul'));
             $width = $('.banner li').eq(0).width();
-            console.log($('.banner li').eq(0).width());
             $ul.css({
                 left: -$width + 'px'
             });
@@ -26,13 +29,11 @@
                 });
                 num = i;
             })
-            $left.on('click', function () {
+            $left.on('click', function () {              
                 num--;
                 $btn.eq(num).addClass('active').siblings().removeClass('active');
-                $oleft = $ul.position().left;
-                $oleft += $width;
                 $ul.stop().animate({
-                    left: $oleft + 'px'
+                    left: -$width*(num+1) + 'px'
                 });
                 if (num < 0) {
                     $ul.css({
@@ -43,15 +44,14 @@
                     num = $btn.size() - 1;
                     $btn.eq(num).addClass('active').siblings().removeClass('active');
                 }
+                return false;
             })
 
-            $right.on('click', function () {
+            $right.on('click', function () {               
                 num++;
-                $btn.eq(num).addClass('active').siblings().removeClass('active');
-                $oleft = $ul.position().left;
-                $oleft -= $width;
+                $btn.eq(num).addClass('active').siblings().removeClass('active');               
                 $ul.stop().animate({
-                    left: $oleft + 'px'
+                    left: -$width*(num+1) + 'px'
                 });
                 if (num > 4) {
                     $ul.css({
@@ -62,6 +62,7 @@
                     num = 0;
                     $btn.eq(num).addClass('active').siblings().removeClass('active');
                 }
+                return false;
             })
             timer = setInterval(function () {
                 $right.click();
@@ -74,17 +75,21 @@
                 }, 2000)
             })
 
-        })
     });
 
     //二级导航
     $(function ($) {
-        $(document).one('mouseenter', function () {
-            $('.nav_list ul li').hover(function () {
-                $('.box').stop().animate({
-                    width: 447
-                });
-                $('.box').children().eq($(this).index()).show().siblings().hide();
+            $('.nav_list ul li').hover(function () { 
+                if($('.box').children().eq($(this).index())){
+                    $('.box').stop().animate({
+                        width: 447
+                    });
+                    $('.box').children().eq($(this).index()).show().siblings().hide();
+                }else{
+                    $('.box').stop().animate({
+                        width: 0
+                    });
+                }
             }, function () {
 
                 $('.box').hover(function(){
@@ -103,7 +108,6 @@
                 
 
             })
-        });
     });
 
     $('.bx_box .pro_list li').each(function (i) {
@@ -144,7 +148,7 @@
     })
 
     $(function ($) {
-        $(document).one('mouseenter', function () {
+
             $('.right_com li img').hover(function () {
                 $(this).animate({
                     left: '10px'
@@ -154,7 +158,7 @@
                     left: '0'
                 });
             })
-        })
+        
     })
     //新品
     $(function ($) {
@@ -170,7 +174,7 @@
     })
     
     $(function ($) {
-        $(document).one('mouseenter', function () {
+
         $('.new_img a img').hover(function () {
             $(this).stop().animate({
                 left: '-5px'
@@ -180,7 +184,7 @@
                 left: '0'
             });
         })
-    })
+    
     })
     //我要定制
     $(function ($) {
@@ -196,7 +200,7 @@
     })
 
     $(function ($) {
-        $(document).one('mouseenter', function () {
+
         $('.make_img a img').hover(function () {
             $(this).stop().animate({
                 left: '-5px'
@@ -206,7 +210,7 @@
                 left: '0'
             });
         })
-    })
+    
     })
     //优品专辑
     $('.good_tab li').each(function (i) {
@@ -217,7 +221,7 @@
         $('.good_tab li:first').find('i').css({
             'backgroundPosition': '0 -402px'
         })
-        $(document).one('mouseenter', function () {
+
             $('.good_tab li').on('mouseover', function () {
                 $('.good_bd').children().eq($(this).index()).show().siblings().hide();
                 $(this).css({
@@ -239,7 +243,7 @@
                     'backgroundPosition': +$(this).index() * (-25) + 'px -402px'
                 });
             })
-        })
+        
     })
 
     $(function ($) {
@@ -255,7 +259,7 @@
     })
 
     $(function ($) {
-        $(document).one('mouseenter', function () {
+
             $('.good_list li img').hover(function () {
                 $(this).animate({
                     right: '20px'
@@ -265,7 +269,7 @@
                     right: '10px'
                 });
             })
-        })
+        
     })
     //大家都在说
     $(function ($) {
@@ -274,7 +278,7 @@
         $revleft = $('.rev_left');
         $revright = $('.rev_right');
         var timer = null;
-        $(document).one('mouseenter', function () {
+
             $revleft.on('click', function () {
                 $oul.find('li').eq(-1).remove().clone().prependTo($oul);
             })
@@ -292,12 +296,12 @@
                 }, 2000)
             })
 
-        })
+        
     });
 
     //为您推荐
     $(function ($) {
-        $(document).one('mouseenter', function () {
+
             $('.foryou_bd li img').hover(function () {
                 $(this).animate({
                     top: '-10px'
@@ -307,6 +311,12 @@
                     top: '0'
                 });
             })
-        })
+        
     })
+    //footer精灵图定位
+    $('.footer_top li').each(function (i) {
+        $(this).find('i').css('backgroundPosition', +i * (-50) + 'px -444px');
+    })
+
+})
 })();

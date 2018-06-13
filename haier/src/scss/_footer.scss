@@ -36,11 +36,7 @@ $bg-position:background-position;
     }
 }
 
-@for $i from 1 through 4 {
-    .footer_top li:nth-of-type(#{$i}) i {
-        #{$bg-position}: ($i - 1)*(-50px) -444px;
-    }
-}
+
 
 .footer_bot {
     padding: 20px 0 40px;

@@ -35,20 +35,35 @@
                     <dl class="phone clear">
                         <dt class="phonenum">手机号</dt>
                         <dd>
-                            <input type="text" name="phone">
+                            <label>
+                            <input type="text" class="phone" id="phone" required>
+                            <span></span>
+                            <em>请输入手机号</em>
+                            </label>
                         </dd>
+                        
                     </dl>
                     <dl class="pass clear">
                         <dt class="password">密码</dt>
                         <dd>
-                            <input type="password" name="password">
+                            <label>
+                            <input type="password" name="password"  id="password" required>
+                            <span></span>
+                            <em>请输入密码</em>
+                            </label>
                         </dd>
+                        
+                        <i>密码为数字、字母、特殊符号的组合，长度6位~20位</i>
                     </dl>
                     <dl class="repass clear">
                         <dt class="repassword">确认密码</dt>
                         <dd>
-                            <input type="password" name="repassword">
+                            <label>
+                            <input type="password" name="repassword"  id="repassword" required>
+                            <em>请确认密码</em>
+                            </label>
                         </dd>
+                        
                     </dl>
                     <div class="agree">
                         <input type="checkbox" name="checkbox" id="">
@@ -104,6 +119,10 @@
         </div>
 
     </div>
+    <script src="../script/lib/jquery-1.12.4.min.js"></script>
+    <script src="../script/lib/jquery.validate.min.js"></script>
+    <script src="../script/js/additional-methods.js"></script>
+    <script src="../script/js/reg.js"></script>
 </body>
 
 </html>
