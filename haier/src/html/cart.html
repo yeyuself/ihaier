@@ -13,10 +13,6 @@
 <body>
     <div class="top">
         <div class="top_wrap">
-            <div class="top_position">
-                <i></i>
-                <span>青岛</span>
-            </div>
             <ul class="top_nav">
                 <li>嗨，欢迎来到海尔官方商城 请
                     <a class="login" href="login.html">登陆</a>
@@ -98,17 +94,39 @@
                     <li class="handle">操作</li>
                 </ul>
                 <div class="form_bd">
-                    <div class="empty">
+                    <div class="empty" style="display: none;">
                         <p>购物车还是空的，现在开始行动吧！</p>
+                    </div>
+                    <div class="cart_list">
+                        <div class="list_chex">
+                            <input type="checkbox" checked="checked">
+                        </div>
+                        <div class="pro_inf">
+                            <a href="javascript:" class="img"><img src="http://cdn02.ehaier.com/product/5b20925d1671c4b0128b4650_80_80.jpg"></a>
+                            <h4><a href="javascript:">Haier/海尔冰箱BCD-572WDENU1 572升WIFI智能变频风冷无霜对开门冰箱</a></h4>
+                        </div>
+                        <p class="freemail">支持</p>
+                        <p class="price">价格</p>
+                        <div class="num">
+                                <em class="sub">-</em>
+                                <input type="text" value="1">
+                                <em class="add">+</em>
+                        </div>
+                        <p class="discount">￥0</p>
+                        <p class="small">小计</p>
+                        <div class="control">
+                            <a href="javascript:" class="collect">移入收藏夹</a>
+                            <a href="javascript:" class="del">删除</a>
+                        </div>
                     </div>
                 </div>
                 <div class="total">
                     <div class="total_all">
                         商品总计：
-                        <span class="total_color">￥0</span> + 运费:
-                        <span class="total_color">￥0</span> - 优惠活动：
-                        <span class="total_color">￥0</span> = 订单总计：
-                        <span class="total_color">￥0</span>
+                        <span class="total_color total_p">￥0</span> + 运费:
+                        <span class="total_color trans">￥0</span> - 优惠活动：
+                        <span class="total_color down">￥0</span> = 订单总计：
+                        <span class="total_color all_p">￥0</span>
                     </div>
                 </div>
 
@@ -127,8 +145,8 @@
                     <p class="delshopping">删除选中商品</p>
                 </div>
                 <div class="account_right">
-                    <a class="account_color">0</a> 件 订单总计：
-                    <a class="account_color">￥0</a>
+                    <a class="account_color tolal_num">0</a> 件 订单总计：
+                    <a class="account_color total_price">￥0</a>
                     <a class="account_sub">立即结算</a>
                 </div>
             </div>
@@ -302,6 +320,9 @@
         </div>
 
     </div>
+    <script src="../script/lib/jquery-1.12.4.min.js"></script>
+    <script src="../script/lib/jquery.cookie.js"></script>
+    <script src="../script/js/cart.js"></script>
 </body>
 
 </html>

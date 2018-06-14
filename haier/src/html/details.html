@@ -222,19 +222,7 @@
                     <p class="kf"><a href="javascript:"><i></i>在线客服</a></p>
                     <div class="deal">
                         <form action="">
-                            <div class="area">
-                                <span class="s_title">配送至：</span>
-                                <span class="s_location">请选择地区</span>
-                                <span class="s_tip">（请选择配送区域）</span>
-                                <div class="areaselect" data-toggle="distpicker">
-                                    <select class="province" size="8">   
-                                    </select>
-                                    <select class="city" size="8">  
-                                    </select>
-                                    <select class="district" size="8">   
-                                    </select>
-                                </div>
-                            </div>
+                            
                             <div class="count">
                                 <span class="count_title">我要买：</span>
                                 <span class="count_num">
@@ -244,8 +232,8 @@
                                 </span>
                             </div>
                             <div class="buy">
-                                <input type="submit" value="立即购买">
-                                <input type="button" value="加入购物车">
+                                <input type="button" value="立即购买" class="nowbuy">
+                                <input type="button" value="加入购物车" class="addcart">
                             </div>
                             <p class="inv">海尔商城作为全国首批电子发票试点网上商城，于2014年3月31日起全面推行电子发票</p>
                         </form>
@@ -422,8 +410,7 @@
             </div>
 
     <script src="../script/lib/jquery-1.12.4.min.js"></script>
-    <script src="../script/js/distpicker.data.js"></script>
-    <script src="../script/js/distpicker.js"></script>
+    <script src="../script/lib/jquery.cookie.js"></script>
     <script src="../script/js/details.js"></script>
 </body>
 </html>

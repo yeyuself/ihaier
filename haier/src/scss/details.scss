@@ -207,31 +207,7 @@ $bg-position:background-position;
     }
 }
 
-.area {
-    line-height: 32px;
-    margin-bottom: 10px;
-    position: relative;
-    .s_location {
-        display: inline-block;
-        border: 1px solid #cecbce;
-        cursor: pointer;
-        height: 22px;
-        line-height: 21px;
-        padding: 0 18px 0 5px;
-        margin: 0 4px 0 0;
-        background: #fff $bg-img no-repeat right bottom;
-    }
-}
 
-.areaselect{
-    position: absolute;
-    top:28px;
-    left: 51px;
-    border: 1px solid #cecbce;
-    background: #fff;
-    padding: 10px;
-    display: none;
-}
 
 .count {
     line-height: 32px;
@@ -278,12 +254,13 @@ $bg-position:background-position;
         padding-left: 22px;
         font-size: 16px;
         color: #fff;
+        cursor: pointer;
     }
-    input[type="submit"] {
+    .nowbuy {
         width: 121px;
         background: $bg-img no-repeat;
     }
-    input[type="button"] {
+    .addcart {
         width: 139px;
         background: $bg-img no-repeat -124px 0px;
     }

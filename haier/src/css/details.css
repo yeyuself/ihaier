@@ -495,29 +495,6 @@ i {
     margin-left: 45px;
     margin-top: 5px; }
 
-.area {
-  line-height: 32px;
-  margin-bottom: 10px;
-  position: relative; }
-  .area .s_location {
-    display: inline-block;
-    border: 1px solid #cecbce;
-    cursor: pointer;
-    height: 22px;
-    line-height: 21px;
-    padding: 0 18px 0 5px;
-    margin: 0 4px 0 0;
-    background: #fff url(../img/New_sprite-product.png) no-repeat right bottom; }
-
-.areaselect {
-  position: absolute;
-  top: 28px;
-  left: 51px;
-  border: 1px solid #cecbce;
-  background: #fff;
-  padding: 10px;
-  display: none; }
-
 .count {
   line-height: 32px;
   margin-bottom: 10px; }
@@ -558,10 +535,11 @@ i {
     font-weight: bold;
     padding-left: 22px;
     font-size: 16px;
-    color: #fff; }
-  .buy input[type="submit"] {
+    color: #fff;
+    cursor: pointer; }
+  .buy .nowbuy {
     width: 121px;
     background: url(../img/New_sprite-product.png) no-repeat; }
-  .buy input[type="button"] {
+  .buy .addcart {
     width: 139px;
     background: url(../img/New_sprite-product.png) no-repeat -124px 0px; }

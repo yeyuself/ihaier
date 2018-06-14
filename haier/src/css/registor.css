@@ -82,13 +82,26 @@
         line-height: 18px;
         overflow: hidden;
         border: 1px #e6e6e6 solid; }
-    .reg_form dl i {
+  .reg_form .pass {
+    position: relative; }
+    .reg_form .pass i {
       position: absolute;
       left: 105px;
-      top: 10px;
+      top: 35px;
       font-size: 12px;
       display: none;
-      z-index: 6; }
+      z-index: 6;
+      border: 1px solid #606060;
+      background: #f0f8ab;
+      padding: 0 4px;
+      line-height: 20px; }
+
+#password-error, #phone-error {
+  font-size: 12px; }
+
+span.error {
+  padding: 2px 20px;
+  background: url(../img/inputState-icon.png) no-repeat 0 2px; }
 
 .agree {
   width: 355px;

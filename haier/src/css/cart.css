@@ -220,6 +220,97 @@ i {
   height: 100px;
   font-size: 16px; }
 
+.cart_list {
+  background-color: #eaf9ff;
+  padding: 20px 0 0 52px;
+  height: 99px;
+  position: relative;
+  border-top: 1px solid #e2e2e2;
+  display: none; }
+  .cart_list .list_chex {
+    width: 14px;
+    float: left; }
+  .cart_list .pro_inf {
+    width: 270px;
+    height: 88px;
+    float: left;
+    overflow: hidden;
+    padding: 0 0 0 24px; }
+    .cart_list .pro_inf .img {
+      width: 78px;
+      height: 78px;
+      float: left;
+      background: #fff;
+      overflow: hidden;
+      border: 1px solid #dcdcdc; }
+      .cart_list .pro_inf .img img {
+        width: 78px;
+        height: 78px; }
+    .cart_list .pro_inf h4 {
+      margin-left: 10px;
+      color: #555;
+      display: inline-block;
+      margin-top: 5px;
+      overflow: hidden;
+      width: 175px;
+      height: 31px;
+      line-height: 16px;
+      word-wrap: break-word;
+      word-break: break-all; }
+  .cart_list .freemail {
+    width: 108px;
+    text-align: center;
+    float: left;
+    line-height: 25px; }
+  .cart_list .price {
+    float: left;
+    line-height: 25px;
+    width: 86px; }
+  .cart_list .num {
+    float: left;
+    width: 86px;
+    height: 22px;
+    overflow: hidden;
+    padding-right: 44px; }
+    .cart_list .num em {
+      background: #fef9f5;
+      border: 1px #ffe0c6 solid;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      float: left;
+      cursor: pointer;
+      color: #a2a2a2; }
+    .cart_list .num input {
+      width: 42px;
+      height: 18px;
+      line-height: 20px;
+      float: left;
+      color: #555555;
+      text-align: center;
+      border: 0;
+      outline: none;
+      background: #ffffff;
+      border-top: 1px #ffe0c6 solid;
+      border-bottom: 1px #ffe0c6 solid; }
+  .cart_list .discount,
+  .cart_list .small {
+    float: left;
+    width: 108px;
+    color: #d71249;
+    margin-top: 5px; }
+  .cart_list .control {
+    float: left;
+    margin-left: 3px;
+    width: 95px; }
+    .cart_list .control a {
+      display: block;
+      margin-bottom: 5px;
+      cursor: pointer;
+      font-weight: normal;
+      margin-top: 5px; }
+
 .total {
   height: 39px;
   padding-right: 20px;

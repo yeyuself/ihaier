@@ -319,4 +319,25 @@
     })
 
 })
+
+
+if($.cookie('phonenum')){
+    $('.top_nav li:first').html('欢迎您，<a href="javascript:">'+$.cookie('phonenum')+'</a>，<span>退出</span>');
+    $('.top_nav li').eq(1).hide();
+    $('.top_nav li').eq(2).hide();
+    $('.user_n').html('欢迎您，'+$.cookie('phonenum'));
+    $('.user_login').html('普通会员');
+    $('.top_nav li:first').find('span').on('click',function(){
+        $('.top_nav li:first').html('嗨，欢迎来到海尔官方商城 请'
+        +'<a class="login" href="login.html">登陆</a>')
+        $('.top_nav li').eq(1).show();
+    $('.top_nav li').eq(2).show();
+        $('.user_n').html('Hi~ 你好');
+        $('.user_login').html('<a href="login.html">登陆</a>'+
+        '<a href="registor.html">注册</a>');
+        $.cookie('phonenum', '',{expires: -1});
+    })  
+}
+
+
 })();

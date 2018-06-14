@@ -2,9 +2,11 @@
     
     $str=window.location.search;
     $arr=$str.split(';');
+    $sid=$arr[0].split('=')[1];
     $('.links strong').html(decodeURI($arr[1]));
     $('.product_inf h2').html(decodeURI($arr[1]));
     $('.price span').html(decodeURI($arr[2]));
+    console.log($arr[3])
     $.each($arr[3].split(','),function(i,url){
         $('.imglist').append('<li><img src="'+url+'"></li>')
     })
@@ -61,29 +63,58 @@
             }
         })
     })
-})();
+
 
 $('.add').on('click',function(){
     $num=$('.count_num input').val();
     $num++;
     $('.count_num input').val($num)
 })
-
-
-
-//
-
-
-$('.district').on('click',function(){
-    $('.areaselect').hide();
-    $('.s_location').html($('.province option:selected').val()+$('.city option:selected').val()+$('.district option:selected').val())
-    $('.s_tip').hide();
+$('.sub').on('click',function(){
+    $num=$('.count_num input').val();
+    $num--;
+    if($num<=0){
+        $num=0;
+    }
+    $('.count_num input').val($num)
 })
 
 
-$('.s_location').on('click',function(){
-    $('.areaselect').show();
+var sidarr = [];
+var numarr = [];
+function getcookievalue(){
+    if($.cookie('cartsid')){//cartsid：cookie里面id的名称
+        sidarr=$.cookie('cartsid').split(',');//cookie转数组
+    }
+    
+    if($.cookie('cartnum')){//cartnum：cookie里面数量的名称
+        numarr=$.cookie('cartnum').split(',');
+    }
+}
+$('.addcart').on('click',function(){
+    getcookievalue();
+    if($.inArray($sid, sidarr) != -1){
+        if($.cookie('cartnum')==''){
+            var num=parseInt($('.count_num input').val());
+            numarr[$.inArray($sid,sidarr)]=num;
+            $.cookie('cartnum', numarr.toString(), { expires: 7 });//修改后的结果
+            sidarr[$.inArray($sid,sidarr)]=$sid;//将当前id添加到对应的位置。
+            $.cookie('cartsid', sidarr.toString(), { expires: 7 });//将整个数组添加到cookie
+        }else{
+            //走这里代码已经存在cookie,数量累加，取出cookie的数量+当前的输入的数量
+            var num=parseInt(numarr[$.inArray($sid,sidarr)])+parseInt($('.count_num input').val());
+            numarr[$.inArray($sid,sidarr)]=num;
+            $.cookie('cartnum', numarr.toString(), { expires: 7 });//修改后的结果
+        }
+    }else{
+        sidarr.push($sid);
+        $.cookie('cartsid', sidarr.toString(), { expires: 7 });
+        numarr.push($('.count_num input').val());
+        $.cookie('cartnum', numarr.toString(), { expires: 7 });
+    }
 })
+
+
 
 
 //footer精灵图定位
@@ -91,3 +122,4 @@ $('.footer_top li').each(function (i) {
     $(this).find('i').css('backgroundPosition', +i * (-50) + 'px -444px');
 })
 
+})();

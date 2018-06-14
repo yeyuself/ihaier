@@ -14,12 +14,11 @@ require "conn.php";
 
 
 
-/* if (isset($_POST['submit'])) {
-    $username = $_POST['username'];
+if (isset($_POST['submit'])) {
+    $phone = $_POST['phone'];
     $password = md5($_POST['password']);
-    $email = $_POST['email'];
-    $query = "insert user value(default,'$username','$password','$email')";
+    $query = "insert into user (sid,phone,password) values(null,'$phone','$password')";
     mysql_query($query);
-    header('location:../login.html');
-} */
+    header('location:../src/html/login.html');
+}
 ?>

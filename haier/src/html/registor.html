@@ -31,13 +31,13 @@
         <!-- 注册 -->
         <div class="reg">
             <div class="inner">
-                <form action="" class="reg_form">
+                <form action="../../php/reg.php" class="reg_form" method="POST">
                     <dl class="phone clear">
                         <dt class="phonenum">手机号</dt>
                         <dd>
                             <label>
-                            <input type="text" class="phone" id="phone" required>
-                            <span></span>
+                            <input type="text" class="phone" id="phone" name="phone">
+                            <span id="phone-error"></span>
                             <em>请输入手机号</em>
                             </label>
                         </dd>
@@ -47,26 +47,26 @@
                         <dt class="password">密码</dt>
                         <dd>
                             <label>
-                            <input type="password" name="password"  id="password" required>
-                            <span></span>
+                            <input type="password" name="password"  id="password">
+                            <span id="password-error"></span>
                             <em>请输入密码</em>
                             </label>
                         </dd>
-                        
                         <i>密码为数字、字母、特殊符号的组合，长度6位~20位</i>
                     </dl>
                     <dl class="repass clear">
                         <dt class="repassword">确认密码</dt>
                         <dd>
                             <label>
-                            <input type="password" name="repassword"  id="repassword" required>
+                            <input type="password" name="repassword"  id="repassword">
+                            <span id="password-error"></span>
                             <em>请确认密码</em>
                             </label>
                         </dd>
                         
                     </dl>
                     <div class="agree">
-                        <input type="checkbox" name="checkbox" id="">
+                        <input type="checkbox" name="checkbox" id="checkbox" >
                         <label class="checkbox">
                             我已阅读并同意
                             <a href="#"> 《海尔商城用户服务协议》</a> 和
@@ -74,7 +74,7 @@
                         </label>
                     </div>
                     <div class="reg_now">
-                        <input type="submit" value="立即注册">
+                        <input type="submit" value="立即注册" name="submit">
                     </div>
                 </form>
             </div>
@@ -121,7 +121,6 @@
     </div>
     <script src="../script/lib/jquery-1.12.4.min.js"></script>
     <script src="../script/lib/jquery.validate.min.js"></script>
-    <script src="../script/js/additional-methods.js"></script>
     <script src="../script/js/reg.js"></script>
 </body>
 
