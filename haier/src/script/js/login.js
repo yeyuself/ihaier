@@ -20,7 +20,7 @@
         $('.sub').on('click', function() {
             $.ajax({
                 type: 'post',
-                url: 'http://localhost/ihaier/haier/php/login.php',
+                url: '../../php/login.php',
                 data: {
                     phone: $('#phone').val(),
                     pass: $('#password').val()
@@ -36,6 +36,11 @@
             })
             
         });
+        $(document).keyup(function(event){
+            if(event.keyCode ==13){
+              $(".sub").trigger("click");
+            }
+          });
 
         
     })

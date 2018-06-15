@@ -450,7 +450,7 @@ i {
     float: left;
     text-align: center;
     width: 50%;
-    padding: 8px 0;
+    padding: 12px 0 11px;
     border: 1px solid #eaeaea;
     border-left: 0; }
     .vip_inf a i {
@@ -591,8 +591,8 @@ i {
     top: 200px; }
   .right_com li {
     float: left;
-    width: 270px;
     padding: 20px;
+    width: 270px;
     height: 160px;
     position: relative; }
     .right_com li img {
@@ -675,10 +675,10 @@ i {
   margin-right: -10px; }
   .new_img a {
     float: left;
-    width: 180px;
     margin-right: 10px;
     overflow: hidden;
     position: relative;
+    width: 180px;
     height: 240px; }
     .new_img a img {
       width: 190px;
@@ -720,9 +720,9 @@ i {
   margin-right: -10px; }
   .make_img a {
     float: left;
-    width: 180px;
     margin-right: 10px;
     overflow: hidden;
+    width: 180px;
     height: 240px;
     position: relative; }
     .make_img a img {
@@ -823,9 +823,9 @@ i {
     display: block; }
   .good_bd .good_left_img {
     float: left;
-    width: 220px;
     overflow: hidden;
     position: relative;
+    width: 220px;
     height: 332px; }
     .good_bd .good_left_img img {
       width: 230px;
@@ -854,6 +854,8 @@ i {
   .good_list .line4 {
     width: 100%;
     height: 1px;
+    width: 100%;
+    height: 1px;
     top: 166px;
     left: 0; }
   .good_list li {
@@ -863,6 +865,8 @@ i {
     position: relative; }
     .good_list li h4 {
       position: absolute;
+      width: 120px;
+      height: 36px;
       width: 120px;
       height: 36px;
       top: 25px;
@@ -918,9 +922,18 @@ i {
     background-color: #fff;
     padding-bottom: 10px;
     overflow: hidden; }
+    .everyone li .img {
+      width: 290px;
+      height: 250px;
+      display: inline-block;
+      overflow: hidden;
+      position: relative; }
     .everyone li img {
       width: 290px;
-      height: 250px; }
+      height: 250px;
+      position: absolute;
+      left: 0;
+      top: 0; }
     .everyone li .tps_links {
       display: block;
       margin: 10px 0;
@@ -939,8 +952,8 @@ i {
     .everyone li p {
       color: #333;
       margin: 10px 0;
-      height: 36px;
-      width: 270px; }
+      width: 100%;
+      height: 40px; }
     .everyone li span {
       padding: 0 10px;
       line-height: 24px;

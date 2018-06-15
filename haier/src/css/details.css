@@ -400,6 +400,7 @@ i {
       border: 1px solid #e9493d;
       overflow: hidden;
       opacity: 0.5;
+      filter: alpha(opacity=50);
       position: absolute;
       z-index: 20;
       left: 0;
@@ -421,7 +422,9 @@ i {
     .product_picbox .big_scale img {
       position: absolute;
       left: 0;
-      top: 0; }
+      top: 0;
+      width: 1200px;
+      height: 1200px; }
   .product_picbox .product_piclist {
     padding-top: 15px;
     margin: 0 29px;

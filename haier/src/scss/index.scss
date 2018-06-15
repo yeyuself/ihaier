@@ -67,8 +67,7 @@ $bg-position:background-position;
     }
     .banner_left {
         position: absolute;
-        width: 20px;
-        height: 60px;
+        @include width-height(20px, 60px);
         left: 210px;
         top: 170px;
         #{$bg-position}: -125px -31px;
@@ -91,8 +90,7 @@ $bg-position:background-position;
         z-index: 5;
         span {
             display: inline-block;
-            width: 12px;
-            height: 12px;
+            @include width-height(12px, 12px);
             border-radius: 50%;
             background: #b6b6b6;
             cursor: pointer;
@@ -149,7 +147,7 @@ $bg-position:background-position;
         @include left;
         text-align: center;
         width: 50%;
-        padding: 8px 0;
+        padding: 12px 0 11px;
         border: $border-s;
         border-left: 0;
         i {
@@ -312,8 +310,7 @@ $bg-position:background-position;
     position: relative;
     .line1 {
         position: absolute;
-        width: 1px;
-        height: 100%;
+        @include width-height(1px, 100%);
         background: #eaeaea;
         left: 309px;
     }
@@ -323,28 +320,24 @@ $bg-position:background-position;
     }
     .line3 {
         @extend .line1;
-        width: 920px;
-        height: 1px;
+        @include width-height(920px, 1px);
         left: 0;
         top: 200px;
     }
     li {
         float: left;
-        width: 270px;
         padding: 20px;
-        height: 160px;
+        @include width-height(270px, 160px);
         position: relative;
         img {
             float: left;
             margin: 20px 20px 0 0;
-            width: 135px;
-            height: 135px;
+            @include width-height(135px, 135px);
             position: relative;
             left: 0;
         }
         h4 {
-            width: 112px;
-            height: 36px;
+            @include width-height(112px, 36px);
             float: left;
             margin-top: 50px;
             margin-bottom: 12px;
@@ -437,14 +430,12 @@ $bg-position:background-position;
     
     a {
         float: left;
-        width: 180px;
         margin-right: 10px;
         overflow: hidden;
         position: relative;
-        height: 240px;
+        @include width-height(180px, 240px);
         img {
-            width: 190px;
-            height: 240px;
+            @include width-height(190px, 240px);
             position: absolute;
         }
     }
@@ -496,14 +487,12 @@ $bg-position:background-position;
     margin-right: -10px;
     a {
         float: left;
-        width: 180px;
         margin-right: 10px;
         overflow: hidden;
-        height: 240px;
+        @include width-height(180px, 240px);
         position: relative;
         img {
-            width: 190px;
-            height: 240px;
+            @include width-height(190px, 240px);
             position: absolute;
         }
     }
@@ -615,13 +604,11 @@ $bg-position:background-position;
     }
     .good_left_img {
         float: left;
-        width: 220px;
         overflow: hidden;
         position: relative;
-        height: 332px;
+        @include width-height(220px, 332px);
         img {
-            width: 230px;
-            height: 332px;
+            @include width-height(230px, 332px);
             position: absolute;
         }
     }
@@ -638,8 +625,7 @@ $bg-position:background-position;
     overflow: hidden;
     .line1 {
         position: absolute;
-        width: 1px;
-        height: 308px;
+        @include width-height(1px, 308px);
         background-color: #eaeaea;
         left: 235px;
         top: 15px;
@@ -656,18 +642,19 @@ $bg-position:background-position;
         @extend .line1;
         width: 100%;
         height: 1px;
+        @include width-height(100%, 1px);
         top: 166px;
         left: 0;
     }
     li {
         float: left;
-        width: 235px;
-        height: 166px;
+        @include width-height(235px, 166px);
         position: relative;
         h4 {
             position: absolute;
             width: 120px;
             height: 36px;
+            @include width-height(120px, 36px);
             top: 25px;
             left: 30px;
         }
@@ -680,8 +667,7 @@ $bg-position:background-position;
         }
         img {
             position: absolute;
-            width: 110px;
-            height: 110px;
+            @include width-height(110px, 110px);
             right: 10px;
             bottom: 10px;
         }
@@ -733,9 +719,17 @@ $bg-position:background-position;
         background-color: #fff;
         padding-bottom: 10px;
         overflow: hidden;
+        .img{
+            @include width-height(290px, 250px);
+            display: inline-block;
+            overflow: hidden; 
+            position: relative;
+        }
         img {
-            width: 290px;
-            height: 250px;
+            @include width-height(290px, 250px);
+            position: absolute;
+            left: 0;
+            top: 0;
         }
         .tps_links {
             display: block;
@@ -758,8 +752,7 @@ $bg-position:background-position;
         p {
             color: #333;
             margin: 10px 0;
-            height: 36px;
-            width: 270px;
+            @include width-height(100%, 40px);
         }
         span {
             padding: 0 10px;
@@ -795,8 +788,7 @@ $bg-position:background-position;
             background: #fff;
             img {
                 display: block;
-                width: 160px;
-                height: 160px;
+                @include width-height(160px, 160px);
                 margin: 17px auto;
                 position: relative;
                 left: 0;

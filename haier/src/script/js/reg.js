@@ -28,7 +28,11 @@
         }   
     })
 
-
+    $(document).keyup(function(event){
+        if(event.keyCode ==13){
+          $(".reg_now input").trigger("click");
+        }
+      });
 
     $(function () {
 

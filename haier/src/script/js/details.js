@@ -1,18 +1,28 @@
 ;(function(){
     
-    $str=window.location.search;
-    $arr=$str.split(';');
-    $sid=$arr[0].split('=')[1];
+    var $str=window.location.search;
+    var $arr=$str.split(';');
+    var $sid=$arr[0].split('=')[1];
     $('.links strong').html(decodeURI($arr[1]));
     $('.product_inf h2').html(decodeURI($arr[1]));
     $('.price span').html(decodeURI($arr[2]));
-    console.log($arr[3])
+    $('.product_pic img').attr('src',$arr[3].split(',')[0]);
     $.each($arr[3].split(','),function(i,url){
         $('.imglist').append('<li><img src="'+url+'"></li>')
     })
 
+    var numarr = [];
+    var num = 0;
+    if ($.cookie('cartnum')) {
+        numarr = $.cookie('cartnum').split(',');
+    }
+    for (var i = 0; i < numarr.length; i++) {
+        num += parseInt(numarr[i]);
+    }
+    $('.cart_show').find('span').html(num);
     //放大镜   
     $(function(){ 
+        $('.big_scale img').attr('src',$('.product_pic img').attr('src'));
         $('.imglist li').on('mouseover',function(){
             $imgsrc=$(this).find("img").attr("src");
             $(this).find("img").css({'border':'2px solid #ccc'});
@@ -20,16 +30,16 @@
             $('.product_pic img').attr({'src':$imgsrc});
             $('.big_scale img').attr({'src':$imgsrc});
         })
-
-        $smallwidth=$('.big_scale').innerWidth()*$('.product_pic img').innerWidth()/$('.big_scale img').innerWidth();
-        $smallheight=$('.big_scale').innerHeight()*$('.product_pic img').innerHeight()/$('.big_scale img').innerHeight();
+        
+       var $smallwidth=$('.big_scale').innerWidth()*$('.product_pic img').innerWidth()/$('.big_scale img').innerWidth();
+       var $smallheight=$('.big_scale').innerHeight()*$('.product_pic img').innerHeight()/$('.big_scale img').innerHeight();
         $scale=$('.big_scale img').innerWidth()/$('.product_pic img').innerWidth();
         $('.product_pic').hover(function(){
             $('.small_scale').css({'width':$smallwidth+'px','height':$smallheight+'px','visibility':'visible'});
             $('.big_scale').css({'visibility':'visible'})
             $(document).on('mousemove',function(ev){
-                $l=ev.pageX-$('.product_pic').offset().left-$smallwidth/2;
-                $t=ev.pageY-$('.product_pic').offset().top-$smallheight/2;
+               var $l=ev.pageX-$('.product_pic').offset().left-$smallwidth/2;
+               var $t=ev.pageY-$('.product_pic').offset().top-$smallheight/2;
                 if($l<=0){
                     $l=0;
                 }else if($l>=$('.product_pic img').innerWidth()-$('.small_scale').innerWidth()){
@@ -49,7 +59,7 @@
             $('.big_scale').css({'visibility':'hidden'});
         })
 
-        $num=5;
+       var $num=5;
         $('.product_picbox .right').on('click',function(){
             if ($('.imglist li').size() > $num) {
                 $num++
@@ -96,6 +106,7 @@ $('.addcart').on('click',function(){
     if($.inArray($sid, sidarr) != -1){
         if($.cookie('cartnum')==''){
             var num=parseInt($('.count_num input').val());
+            $('.cart_show').find('span').html(num);
             numarr[$.inArray($sid,sidarr)]=num;
             $.cookie('cartnum', numarr.toString(), { expires: 7 });//修改后的结果
             sidarr[$.inArray($sid,sidarr)]=$sid;//将当前id添加到对应的位置。
@@ -103,6 +114,7 @@ $('.addcart').on('click',function(){
         }else{
             //走这里代码已经存在cookie,数量累加，取出cookie的数量+当前的输入的数量
             var num=parseInt(numarr[$.inArray($sid,sidarr)])+parseInt($('.count_num input').val());
+            $('.cart_show').find('span').html(num);
             numarr[$.inArray($sid,sidarr)]=num;
             $.cookie('cartnum', numarr.toString(), { expires: 7 });//修改后的结果
         }
@@ -111,6 +123,7 @@ $('.addcart').on('click',function(){
         $.cookie('cartsid', sidarr.toString(), { expires: 7 });
         numarr.push($('.count_num input').val());
         $.cookie('cartnum', numarr.toString(), { expires: 7 });
+        
     }
 })
 

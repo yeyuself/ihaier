@@ -2,7 +2,7 @@
 (function () {
 
     $.ajax({
-        url: 'http://localhost/ihaier/haier/php/index.php',
+        url: '../../php/index.php',
 
         success: function (data) {
             $obj = JSON.parse(data);
@@ -60,7 +60,7 @@
             //大家都在说
             $.each($obj.everyone, function (i, n) {
                 $('.everyone').append(
-                    '<li><a href="javascript:"><img src="' + n.url + '"></a><a href="javascript:" class="tps_links clear"><div><h4>' + n.title + '</h4><strong>' + n.price + '</strong><div><p>' + n.appraise + '</p></a><span>' + n.time + '</span></li>'
+                    '<li><a href="javascript:" class="img"><img src="' + n.url + '"></a><a href="javascript:" class="tps_links clear"><div><h4>' + n.title + '</h4><strong>' + n.price + '</strong><div><p>' + n.appraise + '</p></a><span>' + n.time + '</span></li>'
                 );
             })
 

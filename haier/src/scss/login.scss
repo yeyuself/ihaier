@@ -138,6 +138,11 @@ body {
     }
 }
 
+.error{
+    color: red;
+    height: 20px;
+}
+
 .login_foot {
     border-top: 1px solid #ddd;
     height: 20px;
@@ -153,16 +158,16 @@ body {
         padding-left: 25px;
     
     }
-    a:nth-of-type(1){
+    a.sina{
         background: $bg_image no-repeat 0 -154px;
     }
-    a:nth-of-type(2){
+    a.pay{
         background: $bg_image no-repeat 0 -222px;
     }
-    a:nth-of-type(3){
+    a.yeah{
         background: $bg_image no-repeat 0 -342px;
     }
-    a:nth-of-type(4){
+    a.quick{
         background: $bg_image no-repeat 0 0;
     }
 }
